@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JavaScrip
+        </title>
+        </head>
+        <body>
+<h1 id="myHeading"> my simple heading</h1>
+<input id="input" type="text"placeholder="choose A color">
+<button id="changeBtn"> change color</button>
+<script>
+       document.getElementById("changeBtn").addEventListener('click',function(){
+
+            document.getElementById("myHeading").style.color=document.getElementById("input").value;
+
+        })
+
+</script>
+  </body>
+  </html>

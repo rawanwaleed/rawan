@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tytle>book</tytle>
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Featured
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
+      
+</head>
+<style>
+body{background-color: lightblue; }
+h1{color: lightyellow;
+         text-align: left;}
+  p{font-family: cursive}
+  #first{color:lightyellow} 
+  #secound{color:lightyellow}  
+  .checked{text-decoration: line-through;}
+      
+
+</style>
+<body>
+
+<h1 id="mind">mindfulness</h1>
+<input type="text"id="input">
+<button id=addBtn>Add</button>
+<div id="content"></div>
+<script>
+document.getElementById('content').innerHTML=localStorage.getItem('mylist')
+document.getElementById('addBtn').addEventListener('click',function(){
+var a=document.createElement('li')
+var c = document.createElement('input')
+c.setAttribute('type','checkbox')
+c.addEventListener('change',checkItem)
+    a.append(c)
+a.append(document.getElementById('input').value)
+var b = document.createElement('button')
+b.addEventListener('click',removeItem)
+b.innerHTML="X"
+a.append(b)
+
+document.getElementById('content').append(a)
+localStorage.setItem('mylist',document.getElementById('content').innerHTML)
+
+})
+function removeItem(){
+  this.parentNode.remove()
+}
+
+function checkItem(){
+        this.parentNode.classList.toggle('checked')
+    }
+</script>
+
+
+
+
+<p id= "first" >Live in the moment.Enjoy life with the full </p>
+<p id= "secound"> Begin doing what you want to do now . 
+    We are not living in eternity .
+    We have only this moment,sparkling like a star in our hand,and melting like a snowflake.</p>
+<img src="jfuygkgui.jpg">
+<p>More than twenty years ago,Jon Kabat-Zinn changed the way we thought about awareness in 
+  every life with his now classic introduction to mindfulness.Wherever You Go,There You Are.
+  He followed that up with 2005's Coming to Our Senses ,the definitive book for our time 
+  on the connection brtween mindfulness and our well being every level,physical,congnitive
+  ,socail,planetary,and spiritual</p>
+  <img src="images (1).jpeg">
+  <p>
+    Teach your kids how to foucs their thoughts and notice the world around them with this fun
+    mindfulness kids activity book.Mindfulness activitys are a great way to teach children about 
+    their thoughts and feelings and how to understand them - while having fun at the same time.
+
+  </p>
+<img src="6549203.jpg">
+<p>
+  Our intention is to clearly define mindfulness and its role in psychotherapy and health care,
+   exploring it as an empirically supported clinical intervention across a wide range of populations, 
+   a means of fostering self-care for helping professionals, and a catalyst for going beyond the professions
+    focus on pathology to include positive growth and development.
+
+</p>
+
+
+
+
+
+
+<p>other books of mindfulness.</p>
+
+ <img src=11350120.jpg>
+ <img src=1234.jpg>
+ <img src=8y98y98y.jpg>
+<img src=no.jpg>
+
+
+
+
+
+</body>
+</html>
